@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='div1'></div><br/><br/>
+    <button id='btnDateTime'>Date & Time</button>
+    <script>
+    function $(id)
+    {
+        return document.getElementById(id);
+    }
+    function getDateTime(){
+        var dv=$('div1');
+        dv.innerHTML=Date();
+
+    }
+    var btn=$('btnDateTime');
+    btn.onclick=getDateTime;//................Since it is an action listener we are just assigning the reference of
+                                               //the function to btn.onclick.thus we are not using ()with the call.
+                                               //we are just assigning the function to click event.
+    </script>
+</body>
+</html>

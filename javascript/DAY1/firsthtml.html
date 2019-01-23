@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function foo(){
+            document.getElementById("para1").innerHTML="<h1>Modified Text</h1>";
+        }
+        function bar(){
+            if(this.readyState=="complete"){
+                alert("document.readystatechange"+this.readyState);
+                document.getElementById("para1").innerHTML="<h1>Modified Text</h1>";
+            }
+            console.log("document.readystatechange"+ this.readyState);
+        }
+        document.onreadystatechange=bar;
+    </script>
+</head>
+<body>
+ <p id="para1">This is simple paragraph</p>  
+ 
+</body>
+</html>

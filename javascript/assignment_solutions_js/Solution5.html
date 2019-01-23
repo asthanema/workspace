@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var obj={
+        name:'Sachin',
+        City:'Pune',
+        Age:'42' 
+    }
+    display(obj);
+    function display(e){
+    console.log(e);
+    }
+    var obj1={};
+    for(var i in obj)
+    {
+        obj1[obj[i]]=i;
+    }
+    display(obj1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Parent(relation)
+    {
+        this.relation=relation;
+        this.jobs=['service','bussiness'];
+        this.show=function(){
+            alert(this.relation);
+        }
+    }
+    Parent.prototype.parentPrototypeMethod=function(){
+        alert("Parent's Prototype method");
+
+    }
+    function Child(rel){
+
+    }
+    Child.prototype=new Parent('Mother');
+    Child.prototype.constructor=Child;
+    var child1=new Child('son');
+    var child2=new Child('daughter');
+    child1.show();
+    child2.show();
+    child1.parentPrototypeMethod();
+    console.log(child1.jobs);
+    console.log(child2.jobs);
+    child1.jobs.push('retired');
+    console.log(child1.jobs);
+    console.log(child2.jobs);
+
+    </script>
+</body>
+</html>

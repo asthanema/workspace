@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./mystyles.css/">
+    <script src="./mymath.js"></script>
+</head>
+<body>
+    <b>Addition is <span id='addspan'</span></b><br/>
+    <b>Multiplication is <span id='multspan'</span></b><br/>
+        <b>Multiplication is <span id='multspan'</span></b><br/>
+ <script>
+   var no1=parseInt(prompt('please enter first number',10));
+   var no2=parseInt(prompt('please enter second number',20));
+   var result=add(no1,no2);
+   document.getElementById("addspan").innerHTML=result;
+  
+  
+   result=mult(no1,no2);
+    document.getElementById("multspan").innerHTML=result;
+    result=mult(4,5); 
+   document.getElementById("multspan").innerHTML=result;
+   
+   </script>
+</body>
+</html>

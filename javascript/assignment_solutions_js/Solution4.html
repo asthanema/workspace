@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var bank= [
+ {
+ name: 'JOHN',
+ account: 'Saving',
+ AccountStatus: 'blocked'
+ },
+ {
+ name: 'KATE',
+ account: 'Current',
+ AccountStatus: 'active'
+ },
+ {
+ name: 'MIKE',
+ account: 'Saving',
+ AccountStatus: 'active'
+ }];
+ alert("Welcome to Account status display system");
+ var s=prompt('Please enter your name');
+ var flag=false;
+ for(var i in bank)
+ {
+     
+ if(bank[i].name==s.toUpperCase())
+
+ {
+     alert("Your account type is "+bank[i].account);
+     if(bank[i].AccountStatus=='active')
+ {
+     alert("Account is active");
+      flag=true;
+ }   
+     else
+     {
+     alert("Account is blocked!!..."+ '<br/>');
+     alert("You need to activate your account");
+    }
+    
+}
+ }
+if(flag==false)
+alert("Person Not Found");
+
+ 
+
+ 
+
+ </script>
+</body>
+</html>

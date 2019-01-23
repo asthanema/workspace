@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* tag selector */
+        div {
+            margin: 5px;
+        }
+
+        p {
+            font-size: x-large;
+        }
+
+        /* id selector */
+        #opener {
+            color: green;
+        }
+
+        /* class selector */
+        .closer {
+            background-color: peachpuff;
+        }
+    </style>
+</head>
+
+<body>
+    <p id='opener'>First Paragraph!</p>
+    <p>Second Paragraph!</p>
+    <p class='closer'>Third Paragraph!</p>
+    <p class='closer'>Fourth Paragraph!</p>
+    <div class='closer'>This is div with class closer</div>
+    <div>This is simple div!</div>
+    <br />
+    <span>This is outer span!</span>
+    <div>
+        <span>This is inner span to the div!</span>
+        <br />
+        <span>This is one more inner span to the div!</span>
+    </div>
+    <button id='btnChange'>Change!</button>
+    <script>
+        document.getElementById('btnChange').onclick
+            = function () {
+
+                // DOM Manipulation
+
+                // getElementById
+                // var p1 = document.getElementById('opener');
+                // p1.style.color = 'red';
+
+                // querySelector - you have a complex query
+                // var p1 = document.querySelector('#opener');
+                // p1.style.color = 'maroon';
+
+                // var iSpan = document.querySelector('div > span');
+                // iSpan.style.color = 'Yellow';
+                // iSpan.style.backgroundColor = 'green';
+
+                // // querySelectoAll
+                // var iSpanArr = document.querySelectorAll('div > span');
+                // for(var i in iSpanArr){
+                //     iSpanArr[i].style.color = 'indigo';
+                //     iSpanArr[i].style.backgroundColor = 'aqua';
+                // }
+
+                // // getElementsByTagName
+                // var divArr = document.getElementsByTagName('div');
+                // for(var i in divArr){
+                //     divArr[i].style.color = 'aqua';
+                //     divArr[i].style.backgroundColor = 'indigo';
+                // }
+
+                // // getElementsByClassName
+                // var closerArr = document.getElementsByClassName('closer');
+                // for (var i in closerArr) {
+                //     closerArr[i].style.color = 'yellow';
+                //     closerArr[i].style.backgroundColor = 'green';
+                // }
+
+                // Creation or Insertion
+
+                var newPara = document.createElement('p');
+                newPara.innerHTML = 'New Para';
+                newPara.style.backgroundColor = 'palegreen';
+                newPara.style.color = 'navy';
+                newPara.style.width = '200px';
+                newPara.style.border = 'solid 5px Gray';
+                document.body.appendChild(newPara);
+
+                // deletion
+                var delPara = document.getElementsByTagName('p')[2];// 2 is array index
+                document.body.removeChild(delPara);
+
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h1 id='demo'></h1>
+
+    <button id='btn'>Kill Timer!</button>
+
+    <script>
+
+        // methods of window object
+
+ 
+
+        // setTimeout
+
+        // setInterval
+
+ 
+
+        function foo(){
+
+            //alert('Inside foo!');
+
+            var d = new Date();
+
+            document.getElementById('demo').innerHTML = d.getHours()+':'+d.getMinutes()+':'+d.getSeconds();
+
+            cnt++;
+
+        }
+
+ 
+
+        //foo();
+
+        // var timerId = setTimeout(foo,2000);// occurs only once - after 2 seconds
+
+       
+
+        // clearTimeout(timerId);
+
+ 
+
+        var newTimer = setInterval(foo,1000);// occurs every after 2 seconds
+
+ 
+
+        document.getElementById('btn').onclick = function(){
+
+            clearInterval(newTimer);
+
+        }
+
+     
+
+    </script>
+
+</body>
+
+</html>

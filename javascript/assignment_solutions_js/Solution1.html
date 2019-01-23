@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       alert("Welcome To Tempertaure Convertor") ;
+       var c=parseInt(prompt('Please enter Tempertaure in Celcious '));
+       alert("Temperture in Fahrenheit is" +convert_To_Fahrenheit(c));
+       var f=parseInt(prompt('Please enter Tempertaure in Fahrenheit '));
+       alert("Temperture in Fahrenheit is" +convert_To_Celcious(f));
+      
+      
+function convert_To_Celcious(f)
+{
+   var result=5/9*(f-32);
+   return result;
+}
+function convert_To_Fahrenheit(c)
+{
+   var ans=9/5*(c+32);
+   return ans;
+}
+ </script>
+</body>
+</html>

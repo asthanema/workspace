@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s=prompt('Please enter any string');
+        var a=s.split(" ");
+        
+        var max=a[0];
+        for(var i in a)
+        {
+        if(a[i].length>max.length)
+        max=a[i];
+        } 
+document.write('Longest word in given string is '+max +'<br/>' );
+document.write('Length of the longest word is '+max.length);
+        </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div.static {
+            position: static;
+            border: 3px solid maroon;
+        }
+
+        div.relative {
+            position: relative;
+            border: 3px solid maroon;
+            width: 400px;
+            height: 200px;
+            left: 30px;
+        }
+
+        div.absolute {
+            position: absolute;
+            border: 3px solid maroon;
+            width: 300px;
+            right: 10px;
+        }
+
+        div.fixed {
+            position: fixed;
+            border: 3px solid maroon;
+            width: 300px;
+            right: 10px;
+        }
+
+        div.inherit {
+            position: inherit;
+            border: 3px solid maroon;
+            left: 40px;
+        }
+
+        div.sticky {
+            position: sticky;
+            border: 3px solid maroon;
+            padding: 5px;
+            background-color: aqua;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='static'>
+        This div element has default position:static;
+    </div>
+    <div class='relative'>
+        This div elemen has position: relative - relative
+        element is positioned relative to its normal position.
+        <div class='absolute'>
+            This element has position: absolute - absolute
+            element is positioned relative to its first
+            positioned ancestor node.
+        </div>
+        <div class='fixed'>
+            This element has position: fixed - fixed
+            element is positioned relative to the
+            browser window.
+        </div>
+        <div class='inherit'>
+            This element has position: inherit - inherit
+            element is positioned based on parent's position.
+        </div>
+    </div>
+    <div class='sticky'>
+        This div element has position:sticky;
+    </div>
+    <div style="padding-bottom:2000px">
+        <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll
+            position.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et
+            eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus
+            repudiandae
+            nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    </div>
+</body>
+
+</html>

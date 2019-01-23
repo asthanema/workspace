@@ -1,0 +1,52 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+        </head>
+        <body>
+            <div id='display'></div><br/><br/>
+            <button onclick="loadDoc()">Display Content</button>
+            <script>
+            function loadDoc(){
+                var url="https://jsonplaceholder.typicode.com/posts";
+                var xhttp=new XMLHttpRequest();
+                xhttp.onreadystatechange=function(){
+                    if(xhttp.readyState==4 && xhttp.status==200)
+                    {
+                        document.getElementById('display').innerHTML=xhttp.responseText;
+                    }
+                }
+                xhttp.open('GET',url,true);
+                xhttp.send();
+            }
+            function addPost(){
+                var url="https://jsonplaceholder.typicode.com/posts";
+                var xhttp=new XMLHttpRequest();
+                xhttp.onreadystatechange=function(){
+                    if(xhttp.readyState==4 && xhttp.status==200)
+                    {
+                        document.getElementById('display').innerHTML=xhttp.responseText;
+                    }
+                }
+                xhttp.open('POST',url,true);
+                xhttp.setRequestHeader('Content-type','application/json',charset=UTF-8);
+                xhttp.send(JSON.stringify({
+        
+                        userId: 1,
+        
+                        title: 'My Title',
+        
+                        body: 'Some description about my title!'
+        
+                    }))
+        
+                
+            }
+            </script>
+        
+</body>
+</html>

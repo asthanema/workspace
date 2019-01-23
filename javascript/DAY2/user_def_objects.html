@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    function Employee(fName,lName,city)//......................Construtor level
+    {
+        this.fname=fName;
+        this.lname=lName;
+        this.city=city;
+        this.getEmpInfo=function(){
+            alert(this.fname +' ' +this.lname + ' ' +this.city);
+        }
+    }
+var emp1=new Employee('Astha','Nema','Bhopal');
+emp1.getEmpInfo();
+    </script>
+</body>
+</html>

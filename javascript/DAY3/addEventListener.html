@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='d1'>
+         <p id='para1'  >THIS IS PARAGRAPH1</p>
+    </div><br/><br/>
+
+    <div id='d2'>
+            <p id='para2' >This is para2 </p>
+    </div><br/><br/>
+
+    <div id='d3'>
+            <p id='para3' >This is para3</p>
+    </div><br/><br/>
+
+    <div id='d4'>
+            <p id='para4'  >This ia para4</p>
+    </div><br/><br/>
+
+    <div id='d5'>
+            <p id='para5'  >This is para5</p>
+    </div><br/><br/>
+<script>
+      
+      
+      function $(id)
+{
+    return document.getElementById(id);
+}  
+
+
+$('d1').addEventListener('click',function(){
+    alert("You clicked div1")
+  
+    });
+
+$('para1').addEventListener('click',function(e){
+    alert("You clicked para1")
+    e.stopPropagation()});
+
+$('d2').addEventListener('click',function(f){
+    alert("You clicked d1")
+    f.stopPropagation()},true);
+    
+
+$('para2').addEventListener('click',function(){
+    alert("You clicked para2")},true);  
+
+    
+$('d3').addEventListener('click',function(){
+    alert("You clicked d3")},true);
+
+ $('para3').addEventListener('click',function(){
+    alert("You clicked para3")},true);  
+
+$('d4').addEventListener('click',function(){
+    alert("You clicked d4")},true);
+
+
+$('para4').addEventListener('click',function(){
+    alert("You clicked para4"),false});
+
+$('d5').addEventListener('click',function(){
+    alert("You clicked d5")});  
+    
+$('para5').addEventListener('click',function(){
+    alert("You clicked para5"),false});
+
+
+ </script>
+</body>
+</html>

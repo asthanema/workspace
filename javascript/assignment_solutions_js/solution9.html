@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <input type="textarea" id="result" style="height: 60px; width:123px"></input type>
+    <br/>
+<div id="container">
+    <button class="btn" id="0" style="height: 40px; width:40px;background-color :gray " >0</button>
+    <button class="btn" id="1" style="height: 40px; width:40px;background-color :gray " >1</button>
+    <button class="btn" id="2" style="height: 40px; width:40px;background-color :gray " >2</button>
+    <br/>
+    <button class="btn" id="3" style="height: 40px; width:40px;background-color :gray " >3</button>
+    <button class="btn" id="4" style="height: 40px; width:40px;background-color :gray " >4</button>
+    <button class="btn" id="5" style="height: 40px; width:40px;background-color :gray " >5</button>
+    <br/>
+    <button class="btn" id="6" style="height: 40px; width:40px;background-color :gray " >6</button>
+    <button class="btn" id="7" style="height: 40px; width:40px;background-color :gray " >7</button>
+    <button class="btn" id="8" style="height: 40px; width:40px;background-color :gray " >8</button>
+    <br/>
+    <button class="btn" id="9" style="height: 40px; width:40px;background-color :gray " >9</button>
+    <button class="btn" id="+" style="height: 40px; width:40px;background-color :gray " >+</button>
+    <button class="btn" id="-" style="height: 40px; width:40px;background-color :gray " >-</button>
+    <br/>
+    <button class="btn" id="*" style="height: 40px; width:40px;background-color :gray " >*</button>
+    <button class="btn" id="/" style="height: 40px; width:40px;background-color :gray " >/</button>
+    <button class="btn" id="=" style="height: 40px; width:40px;background-color :gray " >=</button>
+    <br/>
+    <button class="btn" id="clear" style="height: 40px; width:128px;background-color :gray " >clear</button>
+</div>
+    <script>
+        function $(id){
+           return document.getElementById('id');
+        }
+    document.getElementById("container").onclick= function(event){
+var temp=(event.target).innerHTML;
+
+if(temp=="=")
+{
+    
+    var ans=eval(document.getElementById("result").value);
+    document.getElementById("result").value=" "
+    document.getElementById("result").value=ans;
+
+}
+else if(temp=="clear")
+{
+    document.getElementById("result").value=" "
+
+}
+else
+document.getElementById("result").value+=temp;
+
+
+    }
+    </script>
+    
+</body>
+</html>

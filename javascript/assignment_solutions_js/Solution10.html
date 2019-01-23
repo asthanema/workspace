@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style="padding:30px;">
+        <Button>
+        <img src='download.jpg' style="width: 100px; height: 100px;"></img>
+        </Button>
+        </div>
+        <script>
+            function $(tag){
+                return document.getElementsByTagName(tag);
+            }
+        
+        $('img')[0].addEventListener("click",function(){
+        alert("You clicked the image with first listener");
+        })
+        $('img')[0].addEventListener("click",function(){
+        alert("You clicked the image with second listener");
+        },true)
+        $('img')[0].addEventListener("click",function(event){
+        alert("You clicked the image with third listener");
+        event.stopPropagation();
+        })
+        $('Button')[0].addEventListener("click",function(){
+        alert("You clicked the Button with capturing");
+        },true)
+        $('div')[0].addEventListener("click",function(){
+        alert("You clicked the div with capturing");
+        },true)
+        </script>
+        
+</body>
+</html>

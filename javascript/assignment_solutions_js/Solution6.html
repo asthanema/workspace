@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Person(name,location){
+         this.name=name,
+        this.location=location
+    }
+    Person.prototype.eat=function(){
+        alert("I like sea food");
+    }
+    Person.prototype.introduction=function(){
+        alert("My name is  "+this.name);
+        alert("I am from  "+this.location)
+    }
+    
+    Developer.prototype=new Person();
+    Developer.prototype.constructor=Developer;
+    
+
+    function Developer(name,location,projects){
+     Person.call(this,name,location); 
+     
+     this.projects=projects;
+    }
+
+
+    Developer.prototype.takeleave=function(){
+        alert("I am on leave next week");
+    }
+
+    Developer.prototype.introduction=function(){
+        alert("My name is "+this.name+" I am from"+ this.location+" I am allocated in "+this.projects);
+    }
+    
+    
+    var p1=new Person('Astha','Nagpur');
+    p1.introduction();
+    p1.eat();
+    var d1=new Developer('Khushboo','Nagpur',['Java','Javascript','C++']);
+    d1.takeleave();
+    d1.introduction();
+
+
+    
+    </script>
+</body>
+</html>

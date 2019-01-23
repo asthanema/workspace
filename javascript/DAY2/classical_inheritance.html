@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Parent(relation){
+        this.relation=relation;
+        this.jobs=['service','bussiness'];
+        this.show=function(){
+            alert(this.relation);
+        }
+    }
+    
+    Parent.prototype.parentPrototypeMethod=function(){
+        alert("Parent's Prototype method");
+    }
+
+
+    Child.prototype=new Parent('son');
+    Child.prototype.constructor=Child;
+    
+    function Child(rel){
+        this.rel=rel;
+        Parent.call(this,rel);//.........syntax of classical inheritance
+        alert(this.rel);
+    }
+    Child.prototype.childPrototypeMethod=function(){
+        alert("Child's Prototype method");
+    }
+
+    var p1=new Parent("Mother");
+    p1.parentPrototypeMethod();
+    p1.show();
+    var child1=new Child('son');
+    var child2=new Child("daughter");
+    child1.show();
+    child2.show();
+    child1.parentPrototypeMethod();
+    child2.childPrototypeMethod();
+    
+    console.log(child1.jobs);
+    console.log(child2.jobs);
+    </script>
+</body>
+</html>

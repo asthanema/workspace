@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* Animation in css3 created by using
+        @keyframes rule */
+        @keyframes slidein{
+            from{
+                margin-left: 100%;
+            }
+            to{
+                margin-left:0%;
+            }
+        }
+        h1{
+            animation: slidein 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes resize{
+            from{
+                height: 0px;
+                background-color: blue;
+            }
+            to{
+                height: 300px;
+                background-color: red;
+            }
+        }
+        div{
+            height: 100px;
+            width:100px;
+            background-color: gray;
+            margin:20px;
+        }
+        #div1{
+            height: 2px;
+            background-color: blue;
+            animation: resize;
+            animation-duration: 5s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+        }
+
+        @keyframes multiColor{
+            0%{background-color: red;}
+            25%{background-color: green;}
+            50%{background-color: blue;}
+            75%{background-color: yellow;}
+            100%{background-color: aqua;}
+        }
+        .divClass{
+            animation-name: multiColor;
+            animation-duration: 8s;
+        }
+        button{
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Animating!</h1>
+    <div id='div1'></div> -->
+
+    <div id='div2'></div>
+    <button id='btnAnimate'>Animate the Div!</button>
+    <script>
+        var dv = document.getElementById('div2');
+        var btn = document.getElementById('btnAnimate');
+        btn.onclick = function(){
+            dv.className = 'divClass';
+        }
+    </script>
+</body>
+</html>

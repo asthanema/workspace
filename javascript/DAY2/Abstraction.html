@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    Person.population=0;//...............static variable
+    function Person()
+    {
+        this.id=100;
+        var name='default';
+        //this.hobbies=['dance','play'];
+
+        var private_method=function(){
+
+            console.log('Private method');
+        }
+
+        this.get_Info=function(){
+            private_method();
+            return this.id + ' ' +this.name;
+
+        }
+    
+    Person.population++;
+    }
+    Person.prototype.hobbies=['music','draw'];
+    var person1=new Person;
+    var person2=new Person;
+    console.log(person1.id);
+    console.log(person1.get_Info);
+    console.log(person1.hobbies);
+    person1.hobbies.push('read');
+    console.log(person1.hobbies);
+    console.log(person1.hobbies);
+    console.log(person2.hobbies);
+    
+    console.log(person2.id);
+    console.log("population is" + Person.population);
+    
+    </script>
+</body>
+</html>

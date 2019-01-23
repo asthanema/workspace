@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="first" >
+        <img id="1" src="pic.jpg" style="width:15%">
+        <img id="2" src="pic1.jpg" style="width:15%"> 
+        <img id="3" src="pic2.jpg" style="width:15%">
+        <img id="4" src="pic3.jpg" style="width:15%">
+        <img id="5" src="pic4.jpg" style="width:17%">
+        <img id="6" src="pic5.jpg" style="width:15%">
+    </div>
+    <div id="second" style="width:50%"></div>
+    <button id='btn'>Toggle Transparency</button>
+</body>
+<script>
+document.getElementById("first").onclick = function(event){
+    var tar = event.target;
+    if(tar.hasAttribute("src")){
+    document.getElementById("second").innerHTML = tar.outerHTML;
+    document.getElementById("second").firstChild.style.width = "100%"
+    }
+}
+document.getElementById('btn').onclick=function(){
+    if(document.getElementById('second').style.opacity != '0.3')
+    document.getElementById('second').style.opacity = '0.3';
+    else
+    document.getElementById('second').style.opacity = '1';
+
+}
+</script>
+</html>

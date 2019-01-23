@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Human(name){
+        this.name=name;
+    }
+    Human.prototype.speak=function(){
+        alert("I speak english");
+    }
+    Human.prototype.introduction=function(){
+        alert("Hi, I am " +this.name);
+    }
+
+    
+    
+    Student.prototype=new Human('default');
+    Student.prototype.constructor=Student;
+
+    
+    </script>
+</body>
+</html>

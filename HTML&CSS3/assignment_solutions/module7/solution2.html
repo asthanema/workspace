@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+            <h1>Place Your Order</h1>
+        <fieldset>
+        
+            <legend>
+               <h2>Personal Details</h2>
+            </legend>
+       First Name<input type="text" placeholder="First Name Only"><br/><br/>
+       Last Name<input type="text" placeholder="Last Name Only"><br/><br/>
+       Email<input type="email" placeholder="example@domain.com"><br/><br/>
+       Telephone<input type="tel" placeholder=" Eg +70400000000"><br/><br/>
+       <input type="text" list="list">
+       <datalist id="list">
+           <option>5</option>
+           <option>6</option>
+           <option>7</option>
+           <option>8</option>
+           <option>9</option>
+           <option>10</option>
+           
+       </datalist>
+      </fieldset>
+        <fieldset>
+            <legend>
+               <h2>Billing Address</h2>
+            </legend>
+               Address<input type="text area" style="height: 100px;width:200px" ><br/><br/>
+               Post Code<input type="text"><br/><br/>
+               Country<input type="text"><br/><br/>
+              </fieldset>
+              <fieldset>
+               <legend>
+                   <h2>Card details</h2>
+                   </legend>
+                   <fieldset>
+                   <legend>
+                       <h3>Card-Type</h3>
+                   </legend>
+                   <input type="radio">VISA
+                   <input type="radio">Mastercard
+                   <input type="radio">AMEX    
+                   Name<input type="text"><br/><br/>
+                   Card No.<input type="text"><br/><br/>
+                   Security code<input type="number"><br/><br/>
+                   Expiry Date<input type="date"><br/><br/>
+
+                </fieldset>         
+               </legend>
+            
+        </fieldset>
+        <br/>
+        <fieldset>
+           <div style="height:50px;width:100px;border:2px">
+            <button type="submit">Place Order</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function one(){
+            return 1;
+        }
+        function two(){
+            return 2;
+        }
+        function invoke_And_Add(fun1,fun2)
+        {
+            return fun1()+fun2();
+
+        }
+       ( function (n)
+        {
+            alert('Doing Initialization once and off!'+n);
+
+        }(5));
+        for(var i=1;i<=5;i++)
+        {
+            (function (n){
+                alert('Doing Initialization once and off!'+n);
+            }
+)(i);
+
+        
+        }
+        console.log('Result is' +invoke_And_Add(one,two));
+        </script>
+</body>
+</html>

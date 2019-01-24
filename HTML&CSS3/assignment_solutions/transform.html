@@ -7,26 +7,41 @@
     <title>Document</title>
     <style>
 
-@keyframes Multicolor{
-        0%{background-color: peachpuff;left:0px;top:0px}
-        25%{background-color:yellow;left:500px;top:0px;border-radius:100px}
-        50%{background-color: blue;left:500px;top:200px;border-radius:0px}
-        75%{background-color: red;left:0px;top:200px;border-radius:100px}
-        100%{background-color: peachpuff;left:0px;top:0px}
+@keyframes Multicolor1{
+        0%{background-color: peachpuff;left:0px;top:200px;opacity:0}
+        25%{background-color:yellow;left:500px;top:0px;border-radius:100px;opacity:1}
+        50%{background-color: blue;left:1000px;top:200px;border-radius:0px;opacity:0}
+        75%{background-color: red;left:500px;top:500px;border-radius:100px;opacity:1}
+        100%{background-color: peachpuff;left:0px;top:200px;opacity:0}
         
     }
-    div{
-
-        
-       
+    @keyframes Multicolor2{
+        0%{background-color: peachpuff;left:0px;top:200px;opacity:0}
+        25%{background-color:yellow;left:500px;top:500px;border-radius:100px;opacity:1}
+        50%{background-color: blue;left:1000px;top:200px;border-radius:0px;opacity:0}
+        75%{background-color: red;left:500px;top:0px;border-radius:100px;opacity:1}
+        100%{background-color: peachpuff;left:0px;top:200px;opacity:0}
+    }
+    #div1{
         border-width:2px;
         border-style: solid;
         height:100px; 
         width:100px;
-        position: relative;
+        position: absolute;
         background-color: peachpuff;
         
-        animation: Multicolor 8s;
+        animation: Multicolor1 8s;
+        animation-iteration-count: infinite;
+    }
+    #div2{
+        border-width:2px;
+        border-style: solid;
+        height:100px; 
+        width:100px;
+        position: absolute;
+        background-color: peachpuff;
+        
+        animation: Multicolor2 8s;
         animation-iteration-count: infinite;
     }
     
@@ -34,5 +49,6 @@
 </head>
 <body>
     <div id="div1"></div>
+    <div id="div2"></div>
 </body>
 </html>

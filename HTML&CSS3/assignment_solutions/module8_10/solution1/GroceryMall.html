@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            background-color: peachpuff;
+        }
+     </style>
+</head>
+<body>
+    <h1>Welcome User</h1>
+    <p>You selected item:</p>
+    <ul></ul>
+    <div id="cart"></div>
+    <button id="btn">Sign Out</button>
+</body>
+<script>
+  
+  for(var i=0;i<=6;i++)
+   {
+localStorage.setItem(i,"Item"+(i+1));
+var list= document.createElement("li");
+document.getElementsByTagName("ul")[0].appendChild(list);
+console.log(document.getElementsByTagName("ul")[0]);
+console.log(localStorage.getItem(i))
+list.innerHTML=localStorage.getItem(i);
+list.setAttribute('onclick','A(this.innerHTML)');
+   }
+   var count=0;
+ function A(x){
+     document.getElementById('cart').innerHTML += x+"<br>";
+     sessionStorage.setItem(count,x);
+     count++;
+ } 
+ document.getElementById("btn").onclick=function(){
+     sessionStorage.clear();
+     location.replace("solution1.html")
+
+ }
+</script>
+</html>

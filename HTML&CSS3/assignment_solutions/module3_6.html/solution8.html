@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #first{
+        background-color: pink;
+        height:200px;
+        width:200px;
+    }
+    #second{
+        background-color: goldenrod;
+        height:200px;
+        width:400px;
+        position:relative;
+        left:20px;
+        margin:20px
+    }
+    #child{
+        background-color:darkcyan;
+        right:0px;
+        bottom:0px;
+        height:150px;
+        width:300px;
+        position:absolute;
+    }
+    #third{
+        background-color: blue;
+        position: fixed;
+        left:500px;
+        width:400px;
+        height:100px;
+        bottom:0px;
+    
+    }
+    </style>
+</head>
+<body>
+    <div id="first">This is the div with position static</div>
+    <div id="second">This div element has position relative
+        <div id="child">This div element has position absolute
+        </div>
+    </div>
+    <div id="third">This div element has position fixed</div>
+</body>
+</html>

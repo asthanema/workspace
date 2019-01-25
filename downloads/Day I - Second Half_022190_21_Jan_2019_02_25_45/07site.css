@@ -1,0 +1,13 @@
+form{
+    width:70%;
+    margin:auto;
+}
+
+legend{
+    font-size: x-large;
+}
+
+.start{
+    font-size: 1.2em;
+    color: red;
+}

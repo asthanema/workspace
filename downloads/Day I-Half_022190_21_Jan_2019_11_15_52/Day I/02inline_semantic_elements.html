@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>This is something <mark>important!</mark></p>
+    <p>
+        Downloaded:-
+        <progress value="40" max="100">40%</progress>
+    </p>
+    <p>
+        Your test score is
+        <meter value="92" min="0" max="100" low="40" high="90" optimum="95"></meter>
+    </p>
+    <p>
+        Your test score is
+        <meter value="50" min="0" max="100" low="40" high="90" optimum="95"></meter>
+    </p>
+    <p>
+        Your test score is
+        <meter value="39" min="0" max="100" low="40" high="90" optimum="95"></meter>
+    </p>
+
+    <p>
+        Temp is
+        <meter value="92" min="0" max="100" low="40" high="90" optimum="35"></meter>
+    </p>
+    <p>
+        Temp is
+        <meter value="50" min="0" max="100" low="40" high="90" optimum="35"></meter>
+    </p>
+    <p>
+        Temp is
+        <meter value="39" min="0" max="100" low="40" high="90" optimum="35"></meter>
+    </p>
+    <p>
+        Output:
+            <input type="text" name="val1" value="1" /> +
+            <input type="text" name="val2" value="3" /> =
+            <output name="op" for="val1 val2" >4</output>
+    </p>
+    <form id='multForm'
+    oninput="op.value = (val1.valueAsNumber || 1)*(val2.valueAsNumber || 1)">
+            <input type="number" name="val1"/> *
+            <input type="number" name="val2"/> =
+            <output name="op" for="val1 val2" ></output>
+    </form>
+
+    <!--  The <time> tag defines a human-readable date and time
+        This element can also be used to encode dates and times in a 
+        machine-readable way so that user agents can offer to add
+    birthday reminders, scheduled events and search engines can
+    produce smarter search results-->
+    
+    <time datetime="14:00">2pm</time>
+</body>
+
+</html>

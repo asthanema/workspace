@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ 
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+</head>
+
+ 
+
+<body>
+
+    <div id='outDiv'></div>
+
+    <br />
+
+    <button id='btnAdd'>Add Post!</button>
+
+    <script>
+
+        document.onreadystatechange = loadDoc;
+
+ 
+
+        function loadDoc() {
+
+            var url = "https://jsonplaceholder.typicode.com/posts";
+
+            var xhttp = new XMLHttpRequest(); // AJAX
+
+            xhttp.onreadystatechange = function () {
+
+                if (xhttp.readyState === 4 && xhttp.status === 200) {
+
+                    var jsonArr = JSON.parse(xhttp.responseText);
+
+                    showArr(jsonArr);
+
+                }
+
+            }
+
+ 
+
+            function showArr(arr) {
+
+                var out = "";
+
+                for (var i in arr) {
+
+                    out += "<br/>" + arr[i].userId + " " + arr[i].id + " " +
+
+                        arr[i].title;
+
+                }
+
+                document.getElementById('outDiv').innerHTML = out;
+
+            }
+
+            xhttp.open('GET', url, true);
+
+            xhttp.send();
+
+        }
+
+ 
+
+        function addPost() {
+
+            var url = "https://jsonplaceholder.typicode.com/posts";
+
+            var xhttp = new XMLHttpRequest(); // AJAX
+
+            xhttp.onreadystatechange = function () {
+
+                // Status - 201 - The request has been fulfilled and
+
+                // has resulted in one or more resources being created
+
+                if (xhttp.readyState === 4 && xhttp.status === 201) {
+
+                        console.log(xhttp.response);
+
+                }
+
+            }
+
+            xhttp.open('POST', url, true);
+
+            xhttp.setRequestHeader('Content-Type','application/json;charset=UTF-8');
+
+            xhttp.send(JSON.stringify({
+
+                userId: 1,
+
+                title: 'My Title',
+
+                body: 'Some description about my title!'
+
+            }))
+
+        }
+
+ 
+
+        document.getElementById('btnAdd').onclick = addPost;
+
+    </script>
+
+</body>
+
+ 
+
+</html>
+

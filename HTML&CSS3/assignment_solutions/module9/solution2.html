@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="guitar.mp3" ></audio>
+    <button id="play">Play/Pause</button>
+    <button id="increase">Volume+</button>
+    <button id="decrease">Volume-</button>
+<script>
+     var a=document.getElementsByTagName("audio")[0];
+    document.getElementById("play").onclick=function(){
+       
+        if(a.paused )
+        a.play();
+        else
+        a.pause();
+    }
+    document.getElementById("increase").onclick=function(){
+     a.volume= Number(a.volume.toPrecision(2));
+     
+      if(a.volume<1)
+      {
+      a.volume+=0.1;
+      a.volume=Number(a.volume.toPrecision(2))
+      console.log("increased to:"+a.volume)
+    }
+    }
+    document.getElementById("decrease").onclick=function(){
+      a.volume=Number(a.volume.toPrecision(2));
+      if(a.volume>0.0)
+      {
+    a.volume-=0.1;
+    a.volume=Number(a.volume.toPrecision(2))
+      console.log("decreased to:"+a.volume)
+    }
+    }
+</script>
+    
+    
+</body>
+</html>

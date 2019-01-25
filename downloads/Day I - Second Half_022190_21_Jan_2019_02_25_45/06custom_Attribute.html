@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            color:white;
+            height:40px;
+            width:200px; 
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Attributes are there to give you additional information, that information
+        may not be useful from end use perspective, but it could be used
+        by framework, library or by developer.
+
+        Attribute name should not contain any uppercase letter and
+        it must be atleast one character long after prefix 
+        'data-'.
+        Attribute value can be any string.
+    -->
+
+    <ul>
+        <li id='redLi' data-color='red' onclick="showDetails(this)" style="background-color:red;">RED</li>
+        <li id='greenLi' data-color='green' onclick="showDetails(this)" style="background-color:green;">GREEN</li>
+        <li id='blueLi' data-color='blue' onclick="showDetails(this)" style="background-color:blue;">BLUE</li>
+    </ul>
+    
+    <script>
+            function showDetails(listItem){
+                var colorType = listItem.getAttribute('data-color');
+                alert('The text '+listItem.innerHTML+' is with '+
+                colorType+' color background!');
+            }
+    </script>
+</body>
+</html>

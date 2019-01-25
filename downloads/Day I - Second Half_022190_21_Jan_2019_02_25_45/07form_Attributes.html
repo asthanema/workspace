@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Attributes!</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./07site.css" />
+</head>
+
+<body>
+    <p>Please complete all required fields marked with a
+        <span class="star">*</span>.</p>
+
+    <form name="form1" method="get" action="https://www.yahoo.com">
+        <fieldset>
+            <legend>User Details</legend>
+            <p>
+                <!-- <label for="fname">First Name
+                    <span class="star">*</span>
+                </label> -->
+                <input type="text" name="fname" id="fname"
+                    placeholder="Enter your First Name!"
+                    autocomplete="off"
+                    required>
+            </p>
+            <p>
+                <label for="lname">Last Name
+                    <span class="star">*</span>
+                </label>
+                <input type="text" name="lname" id="lname" required>
+            </p>
+            <p>
+                <label for="email">
+                    Email
+                    <span class="star">
+                        *
+                    </span>
+                </label>
+                <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+                <label for="password">Password
+                    <span class="star">*</span>
+                    <input type="password" name="password" id="password"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}"
+                    title="Use 6-20 characters, at least 1 uppercase letter and 1 number!"
+                    required>
+                    <Label>Use 6-20 characters, at least 1 uppercase letter and 1 number.</Label>
+                </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <p>
+                <label for="bday">Birthday
+                    <span class="star">*</span>
+                    <span class="instructions"></span>
+                </label>
+                <input type="date" name="bday" id="bday" required>
+            </p>
+            <fieldset>
+                <legend>Gender
+                    <span class="star">*</span>
+                </legend>
+                <input type="radio" value="male" name="gender" id="male" required>
+                <label for="male">Male</label>
+                <input type="radio" value="female" name="gender" id="female" required>
+                <label for="female">Female</label>
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>Address Details</legend>
+            <p>
+                <fieldset>
+                    <legend>Phone</legend>
+                    <span class="hidden">Area Code</span>
+                    <span class="star">*</span>
+                    </label>
+                    <input type="text" name="areacode" id="areacode"
+                    required maxlength="3">
+                    <br />
+                    <label for="threedigits">
+                        <span class="hidden">Three Digits</span>
+                        <span class="star">*</span>
+                    </label>
+                    <input type="text" name="threedigits" id="threedigits"
+                    required maxlength="3">
+                    <br />
+                    <label for="fourdigits" class="inline">
+                        <span class="hidden">Four Digits</span>
+                        <span class="star">*</span>
+                    </label>
+                    <input type="text" name="fourdigits" id="fourdigits"
+                    required maxlength="4">
+                </fieldset>
+            </p>
+            <p>
+                <label for="location">
+                    Location
+                    <span class="star">
+                        *
+                    </span>
+                </label>
+                <input type="text" list="location" required />
+                <datalist id="location"
+                <option value="Pune" />
+                <option value="Mumbai" />
+                <option value="Delhi" />
+                <option value="Hyderabad" />
+                <option value="Kolkata" />
+                </datalist>
+            </p>
+            <p>
+                <label for="zip">Zip Code
+                    <span class="star">*</span>
+                </label>
+                <input type="text" name="Zip" required
+                pattern="\d{6}"/> 
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Terms of Services</legend>
+            <p>
+                <input type="checkbox" name="tos" id="tos" required>
+                <label for="tos">
+                    <span class="star">*</span> I agree to terms of service.</label>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" name="submit" id="submit" value="Submit">
+            <input type="submit" name="submit" id="submit" value="Cancel"
+             formmethod="GET"
+             formaction="https://www.google.com"
+             formnovalidate/>
+        </p>
+    </form>
+</body>
+
+</html>

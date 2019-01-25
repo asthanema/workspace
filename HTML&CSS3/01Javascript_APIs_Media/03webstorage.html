@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function setCounter() {
+            if (!localStorage.getItem('noofPageLoads')) {
+                localStorage.setItem('noofPageLoads', 0);
+            }
+            localStorage.setItem('noofPageLoads',
+                parseInt(localStorage.getItem('noofPageLoads')) + 1);
+
+            document.getElementById('counter').innerHTML
+                = localStorage.getItem('noofPageLoads');
+
+            if (!sessionStorage.getItem('noofPageLoadsPerSession')) {
+                sessionStorage.setItem('noofPageLoadsPerSession', 0);
+            }
+            sessionStorage.setItem('noofPageLoadsPerSession',
+                parseInt(sessionStorage.getItem('noofPageLoadsPerSession')) + 1);
+
+            document.getElementById('scounter').innerHTML
+                = sessionStorage.getItem('noofPageLoadsPerSession');
+        }
+        window.addEventListener('load', setCounter, false);
+    </script>
+    <form>
+        <h1>
+            You have viewed this page <span id='counter'></span> times!
+        </h1>
+        <br /><br /><br /><br /><br /><br /><br />
+        <h1>
+            In Current Session: You have viewed this page <span id='scounter'></span> times!
+        </h1>
+    </form>
+</body>
+
+</html>

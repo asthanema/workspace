@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="https://www.google.co.in" method="GET">
+        <label for="dbBirthDate">
+            Date:
+        </label>
+        <input type="date" name="dbBirthDate" value="2018-06-12" />
+        <br />
+        <label for="dbBirthMonth">
+            Month:
+        </label>
+        <input type="month" name="dbBirthMonth" value="2018-06" />
+        <br />
+        <label for="dbBirthWeek">
+            Week:
+        </label>
+        <input type="week" name="dbBirthWeek" value="2009-12-12" />
+        <br />
+        <!-- date and time with timezone -->
+        <label for="dbDateTime">
+            Date Time:
+        </label>
+        <input type="datetime" name="dbDateTime" />
+        <br />
+        <!-- date and time without timezone -->
+        <label for="dbDateTimeII">
+            Date Time Local:
+        </label>
+        <input type="datetime-local" name="dbDateTimeII" />
+        <br />
+
+        <fieldset>
+            <legend>Contact Details</legend>
+            <label for="dbEmail">
+                Email:
+            </label>
+            <input type="email" name="dbEmail" title="Email Address!" />
+            <br />
+            <label for="dbUrl">
+                url:
+            </label>
+            <input type="url" name="dbUrl" title="Uniform Resource Locator!" />
+            <br />
+            <label for="dbTelephone">
+                Telephone:
+            </label>
+            <input type="tel" name="dbTelephone" title="Telephone!" />
+            <br />
+        </fieldset>
+        <label for="dbNumber">
+            Number:
+        </label>
+        <input type="number" name="dbNumber" />
+        <br />
+        <label for="dbRange">
+            Range:
+        </label>
+        <input type="range" name="dbRange" min="1" max="10" />
+        <br />
+        <label for="dbFile">
+            File:
+        </label>
+        <input type="file" name="dbFile" />
+        <br />
+        <label for="dbColor" id="lblColor">
+            Color:
+        </label>
+        <br />
+        <input type="color" name="dbColor" id="dbColor" 
+        onchange="getElementById('lblColor').style.backgroundColor = getElementById('dbColor').value"/>
+        <br />
+        <lable for='dbCountries'>
+            Country:
+        </lable>
+        <!-- It is mandatory to choose between given values -->
+        <select name="dbCountries">
+            <option value="United Kingdom">UK</option>
+            <option value="Bharat">India</option>
+            <option value="United States of America">USA</option>
+            <option value="Germany">Germany</option>            
+        </select> 
+        <br/>
+        <lable for='dbCountry'>
+                Country:
+            </lable>
+            <input type="text" name="dbCountry" list='countries'/>
+            <!-- It is just a suggestion to select from available
+            or you can add something of your own -->
+            <datalist id='countries'>
+                <option value="UK"/>
+                <option value="India"/>
+                <option value="USA"/>
+                <option value="Germany"/>
+            </datalist>
+            <br/>
+        <br /><br />
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+        <button type="button">Simple Button!</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+</head>
+
+<body>
+    <input type='button' id='btn1' value='Big Loop!' />
+    <input type='button' id='btn2' value='Hello World!' />
+    <script>
+        var worker;
+        function $(id){
+            return document.getElementById(id);
+        }
+        $('btn1').onclick = function(){
+          worker = new Worker('02.2bigLoop.js');
+          // As and when background thread done with it's 
+          // execution and postMessage post the message.
+          // worker's onmessage event get raised and event listener
+          // will get the data.
+          worker.onmessage = function(evt){
+            alert(evt.data+' iterations completed!');
+          }
+        }
+
+        $('btn2').onclick = helloWorld;
+        function helloWorld(){
+            alert('Hello World!');
+        }
+    </script>
+</body>
+
+</html>

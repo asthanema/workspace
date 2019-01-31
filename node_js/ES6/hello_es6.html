@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=if(, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let b=100;
+    if(true){
+       
+       if(true)
+       {
+        console.log(b) 
+       }
+    }
+    console.log(window.b)
+    const PI=3.14;
+
+
+    // Arrow functions
+    var x=5;
+    var Square=function(){
+        return x*x;
+    }
+    console.log(Square())
+   
+   
+   
+    var Square=(x)=>x*x;
+    console.log(Square(4))
+
+
+
+    class Car{
+        constructor(name="i20",speed=200){
+            this.name=name;
+            this.speed=speed;
+        }
+        accelerate(){
+            console.log(this.name+"is running at"+this.speed);
+            console.log(`${this.name} is running at ${this.speed}`);
+        }
+
+    }
+    var obj=new Car();
+    obj.accelerate();
+    
+
+    // inheritance
+
+
+    class JamesBondCar extends Car{
+        constructor(name,speed,sub,invisible)
+    {
+        super(name,speed);
+        this.canSubmerge=sub;
+        this.canBeInvisible=invisible;
+    }
+    accelerate(){
+        return super.accelerate()+" ,Can it be invisible?"+this.canBeInvisible;
+    }
+    }
+    var jbc=new JamesBondCar("ferrari",120,true,true);
+    jbc.accelerate();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</script>
+</body>
+</html>

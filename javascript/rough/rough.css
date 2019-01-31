@@ -1,0 +1,100 @@
+/* header{
+    background-image: url("images/image3.jpg");
+    height:200px; 
+    background-size:100%;
+    background-repeat: no-repeat;
+    
+
+}
+div{
+    position: absolute;
+    left:10px;
+    height: 200px;
+    width:100px;
+    background-image: url("images/download.jpg");
+    /* margin-right:10px;
+    margin-top: 2px; */
+    /* background-size: 100px 100px;
+    
+    background-position: center; 
+    /* height:200px;
+    width:100px; */ 
+
+    /* background-repeat: no-repeat; */
+/* } */
+
+#transform{
+    height:20px;
+    width:20px;
+    position: absolute;
+    border-radius: 50px;
+    left:100px;
+    top:500px;
+    background-color: maroon;
+    animation: Loading 2s   infinite ;
+    opacity: 0;
+}
+#transform1{
+    height:20px;
+    width:20px; 
+    position: absolute;
+    border-radius: 50px;
+    left:100px;
+    top:500px;
+    background-color:maroon;
+    animation: Loading 2s   infinite ;
+    animation-delay: 100ms;
+    opacity: 0;
+}
+#transform2{
+    height:20px;
+    width:20px;
+    position: absolute;
+    border-radius: 50px;
+    left:100px;
+    top:500px;
+    background-color:maroon;
+    animation: Loading 2s   infinite ;
+    animation-delay: 200ms;
+    opacity: 0;
+}
+#transform3{
+    height:20px;
+    width:20px;
+    position: absolute;
+    border-radius: 50px;
+    left:100px;
+    top:500px;
+    background-color:maroon;
+    animation: Loading 2s infinite ;
+    animation-delay: 300ms;
+    opacity: 0;
+}
+#transform4{
+    height:20px;
+    width:20px;
+    position: absolute;
+    border-radius: 50px;
+    left:100px;
+    top:500px;
+    background-color:maroon;
+    animation: Loading 2s infinite ;
+    animation-delay: 400ms;
+    opacity: 0;
+}
+p{
+    position: relative;
+    left:70px;
+    top:610px;
+    color:maroon;
+    animation: opac 2s infinite;
+}
+@keyframes Loading{
+    0%{transform:rotate(0deg) translate(50px,0px);transform-origin:right;opacity: 1;height:20px;width:20px;}
+ 100%{transform: rotate(360deg) translate(50px,0px);opacity: 0.3;height:5px;width:5px;} 
+}
+@keyframes opac {
+    0%{opacity:1};
+    100%{opacity:0.3;color: linear-gradient(to right , red, lightcoral)};
+
+}

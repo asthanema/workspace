@@ -1,0 +1,6 @@
+extends layout
+block content
+    h1 List of Employees
+    ul
+        each employees in employee
+            li(class="employee") #{employees.name} lives in #{employees.location}

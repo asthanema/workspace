@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+     var socket;
+     function Initialize(){
+         socket=io.connect(); //establishing connection
+         socket.on('messageForClient',(dataFromServer)=>{
+             console.log(dataFromServer);
+         })
+ }
+    function SendMsg(){
+        var dataFromTextBox=document.getElementById('txtMsg').value;
+        socket.emit('messageFromClient',dataFromTextBox)
+    }
+    
+    
+    </script>
+</head>
+<body onload="Initialize()">
+    <h1>Using Web Sockets</h1>
+    Enter Message:<input type="text" id="txtMsg"/>
+    <input type="button" value="send" onclick="SendMsg()">
+</body>
+</html>

@@ -1,0 +1,6 @@
+extends layout
+block content
+   h1 List of Products
+   ul
+     each products in allProducts
+      li(class="productStyle") #{products.name} cost Rs. #{products.price}

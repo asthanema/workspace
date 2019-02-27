@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            padding: 1em;
+            margin-bottom:10px;
+
+        }
+        @media only screen and (max-width: 300px){
+            #div3{
+                color:yellow;
+            }
+        }
+        @media only screen and (min-width: 1000px){
+            #div1{
+                color:peachpuff;
+            }
+        }
+        @media only screen and (min-width:500px) and (max-width: 800px){
+            #div2{
+                color:pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="container">
+        This div turns peachpuff when screen size is greater than 1000px
+    </div>
+    <div id="div2" class="container">
+        This div turns pink when screen size in between 500px and 800px
+    </div>
+    <div id="div3" class="container">
+        This div turns yellow when screen size is less than 300px
+    </div>
+    
+     
+   
+</body>
+</html>

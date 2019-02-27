@@ -1,0 +1,29 @@
+<body>
+    <h2>This is Hello Component</h2>
+<div [hidden]="hide">
+    <h2>{{msg}}</h2>
+    <h2>{{location}}</h2>
+    <h2>{{schedule}}</h2>
+</div>
+<button id="btn" [disabled]="isbtndisabled" (click)="handleClick($event)">Ok</button> <br><br>
+<button [style.color]="isSpecial ? 'red':'green'">Red</button> <br><br>
+<button [style.background-color]="canSave ? 'cyan':'grey'">Save</button>   <br><br>
+<div [class]="stylename">
+    Lorem, ipsum dolor sit amet consectetur adipisicing 
+    Eligendi officia blanditiis, amet suscipit sequi qui omnis corporis, dignissimos ea 
+    praesentium dolores adipisci, quidem id cumque placeat architecto pariatur obcaecati dolore?
+</div>
+<br><br><br>
+<div [class.s1]="canSave">
+    Lorem, ipsum dolor sit amet consectetur adipisicing 
+    Eligendi officia blanditiis, amet suscipit sequi qui omnis corporis, dignissimos ea 
+    praesentium dolores adipisci, quidem id cumque placeat architecto pariatur obcaecati dolore?
+</div><br><br><br>
+Type your text here:<input type ="text" (keyup.enter)="showOnClick(inputMsg.value )" #inputMsg>
+<button >Show</button>
+<p>{{text}}</p>
+<!-- disabled pe square bracket se hi vo smjha ki isbtndisabled ek variable h...uski value has
+to be taken from corresponding ts file .this is known as property binding. -->
+</body>
+
+

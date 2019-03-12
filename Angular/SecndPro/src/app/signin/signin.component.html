@@ -1,0 +1,26 @@
+
+<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+  
+  <form action="" method="POST" role="form" (submit)="dologin()" #frm="ngForm">
+    <legend>Sign In</legend>
+  
+    <div class="form-group">
+      <label for="">Login</label>
+      <input type="text" class="form-control" name="login" placeholder="Login" [(ngModel)]="login" #lg="ngModel" required>
+    </div>
+    <!-- <div>valid={{lg.valid}},touched={{lg.touched}},dirty={{lg.dirty}},pristine={{lg.pristine}}</div> -->
+    
+    <div [hidden]="lg.valid || lg.pristine"><p style="color:maroon">Login is Required</p></div>
+    
+    <div class="form-group">
+      <label for="">Password</label>
+      <input type="password" class="form-control" name="password"  placeholder="Password" [(ngModel)]="password" #pw="ngModel" required>
+    
+    </div>
+  
+    <div [hidden]="pw.valid || pw.pristine"><p style="color:maroon">Password Required</p></div>   
+  
+    <button [disabled]="!frm.valid" type="submit" class="btn btn-primary" >Submit</button>
+  </form>
+  
+</div>

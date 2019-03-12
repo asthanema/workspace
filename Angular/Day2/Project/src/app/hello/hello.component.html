@@ -19,8 +19,8 @@
     Eligendi officia blanditiis, amet suscipit sequi qui omnis corporis, dignissimos ea 
     praesentium dolores adipisci, quidem id cumque placeat architecto pariatur obcaecati dolore?
 </div><br><br><br>
-Type your text here:<input type ="text" (keyup.enter)="showOnClick(inputMsg.value )" #inputMsg>
-<button >Show</button>
+Type your text here:<input type ="text"  #inputMsg>
+<button (click)="showOnClick(inputMsg.value)">Show</button>
 <p>{{text}}</p>
 <!-- disabled pe square bracket se hi vo smjha ki isbtndisabled ek variable h...uski value has
 to be taken from corresponding ts file .this is known as property binding. -->

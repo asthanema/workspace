@@ -42,7 +42,7 @@ public handleClick(e:Event):void{
     alert(this.hs.greet())
 }
 public showOnClick(inputMsg):void{
-    
+    alert(inputMsg);
     this.text=inputMsg;
 
 }
